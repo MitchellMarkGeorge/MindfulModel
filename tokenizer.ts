@@ -10,7 +10,7 @@ class Tokenizer {
   wordIndex: object
   indexWord: object
   wordCounts: object
-    constructor(config: TokenizerConfig = {filters: /[\\.,/#!$%^&*;:{}=\-_`~()]/g, lower: true}) {
+    constructor(config: TokenizerConfig = {filters: /[\\.,/#!$%^&*;:{}=\-_`~()]/g, lower: true }) {
       // this.filters = config.filters || /[\\.,/#!$%^&*;:{}=\-_`~()]/g;
       // this.lower = typeof config.lower === 'undefined' ? true : config.lower;
       this.config = config
@@ -24,13 +24,13 @@ class Tokenizer {
   // look into this
     cleanText(text): number[] {
       if (this.config.lower) text = text.toLowerCase();
-      if (this.config.max_len) text
-      let newText = text
+      // if (this.config.max_len) text
+      return text
         .replace(this.config.filters, '')
         .replace(/\s{2,}/g, ' ')
         .split(' ');
-      if (this.config.max_len) newText = newText.slice(0, this.config.max_len)
-      return newText
+      
+      // return newText
     }
 
     // look into this

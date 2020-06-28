@@ -1,7 +1,7 @@
 export interface TokenizerConfig {
     filters?: RegExp,
     lower?: boolean, 
-    max_len?: number
+    
 
 }
 
@@ -10,3 +10,4 @@ export interface ToxicDataType {
     prediction: number[], 
 
 }
+
